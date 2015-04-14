@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    
+</LinearLayout>
+<!-- From: file:/C:/Users/Jeff%20Peterson/Desktop/Android%20Apps/No%20Texting%20While%20Driving/app/src/main/res/layout/how_to.xml -->

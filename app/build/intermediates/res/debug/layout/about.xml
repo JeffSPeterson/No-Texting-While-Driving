@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+>
+	<TextView
+		android:text="Sponcered by the Computer Science Dept. of USC Upstate"
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="25dp"
+
+		android:layout_gravity="center"
+		android:gravity="center"
+	></TextView>
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:background="@android:color/white"
+	></View>
+	<TextView
+		android:gravity="center"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:text="No Text While Driving"
+		android:textSize="25dp"
+		android:layout_gravity="center"
+	></TextView>
+	<TextView
+		android:text="Version: 1.0 "
+		android:id="@+id/textView3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="22dp"
+	></TextView>
+	<TextView
+		android:maxLines="10"
+		android:text="Created By:\n\t Josh Irwin \n\t Jeff Peterson \n\t Jason Lam \n\t Mike Gutbrod"
+		android:id="@+id/textView4"
+		android:layout_height="wrap_content"
+		android:textSize="22dp"
+
+	android:layout_width="fill_parent"></TextView>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/relativeLayout1"
+	>
+		<TextView
+			android:layout_width="wrap_content"
+			android:id="@+id/textView5"
+			android:text="copyright 2012 USC Upstate"
+			android:textSize="22dp"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+		></TextView>
+		<ImageView android:id="@+id/imageView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/uscu_logo" android:layout_above="@+id/textView5" android:layout_centerHorizontal="true"></ImageView>
+	</RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Jeff%20Peterson/Desktop/Android%20Apps/No%20Texting%20While%20Driving/app/src/main/res/layout/about.xml -->

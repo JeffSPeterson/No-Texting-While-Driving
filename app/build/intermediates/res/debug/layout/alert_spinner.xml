@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+>
+
+	<RelativeLayout
+		android:id="@+id/relativeLayout_Spinner"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+	>
+		<Spinner
+			android:prompt="@string/prompt"
+			android:layout_height="wrap_content"
+			android:entries="@array/speedLimits"
+			android:layout_width="200dp"
+			android:id="@+id/spinner1"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true"
+		>
+
+		</Spinner>
+		<Button
+			android:layout_height="wrap_content"
+			android:id="@+id/button_SpinnerSave"
+			android:layout_below="@+id/spinner1"
+			android:layout_alignRight="@+id/spinner1"
+			android:layout_centerHorizontal="true"
+			android:textSize="25dp"
+			android:text="Save"
+			android:layout_width="100dp"
+		></Button>
+		<Button
+			android:layout_height="wrap_content"
+			android:id="@+id/button_SpinnerCancel"
+			android:layout_below="@+id/spinner1"
+			android:layout_alignLeft="@+id/spinner1"
+			android:layout_centerHorizontal="true"
+			android:textSize="25dp"
+			android:text="Cancel"
+			android:layout_width="100dp"
+		></Button>
+
+
+
+	</RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Jeff%20Peterson/Desktop/Android%20Apps/No%20Texting%20While%20Driving/app/src/main/res/layout/alert_spinner.xml -->

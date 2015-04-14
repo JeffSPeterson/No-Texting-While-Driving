@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Jeff%20Peterson/Desktop/Android%20Apps/No%20Texting%20While%20Driving/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="speedLimits">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+    </string-array>
+    <string name="app_name">No Texting While Driving</string>
+    <string name="hello">Hello World</string>
+    <string name="pass_prompt">Please Enter Registered Password to Access</string>
+    <string name="prompt">Choose a Speed to Disable Text at</string>
+</resources>
