@@ -1,105 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical">
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_gravity="center"
+	android:orientation="vertical"
+>
+	<RelativeLayout
+		android:id="@+id/relativeLayout1"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:id="@+id/linearLayout1"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/linearLayout2"
+			android:layout_centerInParent="true"
+		>
+			<TextView
+				android:textSize="20dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView_UserName"
+				android:text="User Name:"
+				android:layout_width="120dp"
+			></TextView>
+			<EditText
+				android:layout_height="wrap_content"
+				android:id="@+id/editText_OwnerName"
+				android:inputType="textPersonName"
+				android:layout_width="fill_parent"
+				android:text="First and Last Name"
+			></EditText>
+		</LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:id="@+id/linearLayout2"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_above="@+id/view"
+		>
+			<TextView
+				android:text="Password:"
+				android:id="@+id/textView_Password"
+				android:layout_height="wrap_content"
+				android:textSize="20dp"
+				android:layout_width="120dp"
+			></TextView>
+			<EditText
+				android:layout_height="wrap_content"
+				android:id="@+id/editText_OwnerPassword"
+				android:inputType="textPassword"
+				android:layout_width="fill_parent"
+			></EditText>
+		</LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:id="@+id/linearLayout1"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/linearLayout2"
-            android:layout_centerInParent="true">
+		<View
+			android:layout_centerInParent="true"
+			android:id="@+id/view"
+			android:layout_width="1px"
+			android:layout_height="1px"
 
-            <TextView
-                android:textSize="20dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_UserName"
-                android:text="User Name:"
-                android:layout_width="120dp"></TextView>
+		></View>
 
-            <EditText
-                android:layout_height="wrap_content"
-                android:id="@+id/editText_OwnerName"
-                android:inputType="textPersonName"
-                android:layout_width="fill_parent"
-                android:text="First and Last Name"></EditText>
-        </LinearLayout>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:id="@+id/linearLayout3"
+			android:layout_centerInParent="true"
+			android:layout_below="@+id/view"
+			android:layout_height="60dp"
+		>
+			<TextView
+				android:text="Phone Number:"
+				android:id="@+id/textView_PhoneNumber"
+				android:textSize="20dp"
+				android:layout_width="120dp"
+				android:layout_height="match_parent"
+			></TextView>
+			<EditText
+				android:id="@+id/editText_OwnerPhone"
+				android:inputType="phone"
+				android:layout_width="fill_parent"
+				android:text="Phone Number"
+				android:layout_height="match_parent"
+			></EditText>
+		</LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:id="@+id/linearLayout2"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_above="@+id/view">
+		<Button
+			android:layout_below="@+id/linearLayout3"
+			android:text="Save"
+			android:id="@+id/button_Save"
+			android:layout_centerInParent="true"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:textSize="30dp"
+		></Button>
 
-            <TextView
-                android:text="Password:"
-                android:id="@+id/textView_Password"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_width="120dp"></TextView>
+		<Button
+			android:text="Back"
+			android:id="@+id/button_BackToMain"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true"
+			android:layout_width="wrap_content"
+			android:textSize="30dp"
+		></Button>
 
-            <EditText
-                android:layout_height="wrap_content"
-                android:id="@+id/editText_OwnerPassword"
-                android:inputType="textPassword"
-                android:layout_width="fill_parent"></EditText>
-        </LinearLayout>
-
-        <View
-            android:layout_centerInParent="true"
-            android:id="@+id/view"
-            android:layout_width="1px"
-            android:layout_height="1px"
-
-            ></View>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:id="@+id/linearLayout3"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/view"
-            android:layout_height="60dp">
-
-            <TextView
-                android:text="Phone Number:"
-                android:id="@+id/textView_PhoneNumber"
-                android:textSize="20dp"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"></TextView>
-
-            <EditText
-                android:id="@+id/editText_OwnerPhone"
-                android:inputType="phone"
-                android:layout_width="fill_parent"
-                android:text="Phone Number"
-                android:layout_height="match_parent"></EditText>
-        </LinearLayout>
-
-        <Button
-            android:layout_below="@+id/linearLayout3"
-            android:text="Save"
-            android:id="@+id/button_Save"
-            android:layout_centerInParent="true"
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:textSize="30dp"></Button>
-
-        <Button
-            android:text="Back"
-            android:id="@+id/button_BackToMain"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_width="wrap_content"
-            android:textSize="30dp"></Button>
-
-    </RelativeLayout>
+	</RelativeLayout>
 </LinearLayout>
