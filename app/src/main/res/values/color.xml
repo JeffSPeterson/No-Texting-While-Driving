@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="hint">#6a86d2de</color>
+    <color name="edit_text_border">#ff000000</color>
+    <color name="edit_text_background">#6a2a3e2f</color>
+    <color name="button_background">#6a568e9d</color>
+    <color name="sonar_ring">#ee1e9d14</color>
+
+</resources>

@@ -1,116 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:layout_gravity="center"
-	android:orientation="vertical"
->
-	<RelativeLayout
-		android:id="@+id/relativeLayout1"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-	>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:updatePeriodMillis="86400000"
+    android:gravity="center_vertical">
 
+    <ImageView
+        android:src="@drawable/unlock"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_lock"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/textView_SpeedMPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=" MPH is the current setting"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/imageView_lock"
+        android:layout_toRightOf="@+id/imageView_lock" />
 
+    <View
+        android:layout_centerInParent="true"
+        android:id="@+id/view1"
+        android:layout_width="1px"
+        android:layout_above="@+id/button_Turn_On_Off"
+        android:layout_height="1px" />
 
-		<ImageView
-			android:src="@drawable/unlock"
-			android:layout_height="wrap_content"
-			android:id="@+id/imageView_lock"
-			android:layout_width="wrap_content"
-			android:layout_above="@+id/button_Turn_On_Off"
-			android:layout_toLeftOf="@+id/view1"
-		></ImageView>
-		
-		<TextView
-			android:id="@+id/textView_SpeedMPH"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="MPH"
-			android:textSize="25dp"
-			android:layout_alignBottom="@+id/imageView_lock"
-			android:layout_toRightOf="@+id/imageView_lock"
-		></TextView>
+    <Button
+        android:text="TURN ON"
+        android:id="@+id/button_Turn_On_Off"
+        style="@style/buttonStyle" />
 
-		<View
-			android:layout_centerInParent="true"
-			android:id="@+id/view1"
-			android:layout_width="1px"
-			android:layout_above="@+id/button_Turn_On_Off"
-			android:layout_height="1px"
+    <Button
+        android:text="SET MPH"
+        android:id="@+id/button_SetMPH"
+        style="@style/buttonStyle" />
 
-		></View>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="1px"
+        android:layout_height="1px" />
 
-		<Button
-			android:layout_above="@+id/button_SetMPH"
-			android:layout_width="fill_parent"
-			android:text="Turn On"
-			android:layout_height="wrap_content"
-			android:id="@+id/button_Turn_On_Off"
-			android:layout_centerInParent="true"
-			android:textSize="25dp"
-			android:layout_margin="1dp"
-		></Button>
+    <Button
+        android:text="@string/speedometer"
+        android:id="@+id/button_Speedometer"
+        style="@style/buttonStyle" />
 
-		<Button
-			android:layout_above="@+id/view2"
-			android:text="Set MPH"
-			android:id="@+id/button_SetMPH"
-			android:layout_centerInParent="true"
-			android:layout_height="wrap_content"
-			android:layout_width="fill_parent"
-			android:textSize="25dp"
-			android:layout_margin="1dp"
-		></Button>
-		<View
-			android:layout_centerInParent="true"
-			android:id="@+id/view2"
-			android:layout_width="1px"
-			android:layout_height="1px"
+    <Button
+        android:text="CHANGE PASSWORD"
+        android:id="@+id/button_ChangePass"
+        style="@style/buttonStyle" />
 
-		></View>
-		<Button
-			android:layout_below="@+id/view2"
-			android:layout_centerInParent="true"
-			android:text="Speedometer"
-			android:id="@+id/button_Speedometer"
-			android:layout_height="wrap_content"
-			android:layout_width="fill_parent"
-			android:textSize="25dp"
-			android:layout_margin="1dp"
+    <Button
+        android:text="@string/back"
+        android:id="@+id/button_BackToMain"
+        style="@style/buttonStyle" />
 
-		></Button>
-
-
-		<Button
-			android:layout_below="@+id/button_Speedometer"
-			android:layout_width="fill_parent"
-			android:text="Change Password"
-			android:id="@+id/button_ChangePass"
-			android:layout_centerInParent="true"
-			android:layout_height="wrap_content"
-			android:textSize="25dp"
-			android:layout_margin="1dp"
-		></Button>
-
-		<Button
-
-			android:text="Back"
-			android:id="@+id/button_BackToMain"
-			android:layout_height="wrap_content"
-			android:layout_alignParentRight="true"
-			android:layout_alignParentBottom="true"
-			android:layout_width="wrap_content"
-			android:textSize="25dp"
-			android:layout_margin="1dp"
-		></Button>
-
-
-
-
-
-
-	</RelativeLayout>
 </LinearLayout>

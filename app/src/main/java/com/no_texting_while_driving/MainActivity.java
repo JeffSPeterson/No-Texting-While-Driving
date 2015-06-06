@@ -1,8 +1,5 @@
 package com.no_texting_while_driving;
 
-
-import com.no_texting_while_driving.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -13,196 +10,163 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-
 
 
 public class MainActivity extends Activity {
-	public static final String PREFS_NAME = "RegistrationPrefs";
 
-	Button bSettings;
-	Button bRegister;
-	Button bHelp;
+    public static final String PREFS_NAME = "RegistrationPrefs";
 
+    Button bSettings;
+    Button bRegister;
+    Button bHelp;
 
+    /**
+     * Called when the activity is first created.
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
 
-	/** Called when the activity is first created. */
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+        bSettings = (Button) findViewById(R.id.button_Settings);
+        bRegister = (Button) findViewById(R.id.button_Register);
+        bHelp = (Button) findViewById(R.id.button_Help);
+        final SharedPreferences settingPrefs = getSharedPreferences(PREFS_NAME, 0);
 
-		bSettings = (Button) findViewById(R.id.button_Settings);
-		bRegister = (Button) findViewById(R.id.button_Register);
-		bHelp = (Button) findViewById(R.id.button_Help);
-		final SharedPreferences settingPrefs = getSharedPreferences(PREFS_NAME, 0);
+        if (settingPrefs.getBoolean("REGISTERED", false) == false) {
 
-		if(settingPrefs.getBoolean("REGISTERED", false)== false){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Would you like to Register this device?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
 
-
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("Would you like to Register this device?")
-			.setCancelable(false)
-			.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
-				}
-			})
-			.setNegativeButton("No", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					// put your code here 
-					dialog.cancel();
-				}
-			});
-			AlertDialog alertDialog = builder.create();
-			alertDialog.show();
-
-		}//end if
-		else{
-
-			//			
-			//			Dialog dialog = new Dialog(this);
-			//			dialog.setContentView(R.layout.yourLayoutId);
-			//			dialog.show();
-		}//end else
+        }//end if
+        else {
+            //
+            //			Dialog dialog = new Dialog(this);
+            //			dialog.setContentView(R.layout.yourLayoutId);
+            //			dialog.show();
+        }//end else
 
 
-		bSettings.setOnClickListener(new View.OnClickListener() {
-			EditText passwordET;
-			Button cancel;
-			Button ok;
+        bSettings.setOnClickListener(new View.OnClickListener() {
+            EditText passwordET;
+            Button cancel;
+            Button ok;
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
+            @Override
+            public void onClick(View v) {
 
-				if(settingPrefs.getBoolean("REGISTERED", false)== true){
+                if (settingPrefs.getBoolean("REGISTERED", false) == true) {
 
-					final String passwordRegistered = settingPrefs.getString("PASSWORD", "");
+                    final String passwordRegistered = settingPrefs.getString("PASSWORD", "");
+                    final Dialog dialog = new Dialog(MainActivity.this);
 
-					final Dialog dialog = new Dialog(MainActivity.this);
-					dialog.setContentView(R.layout.password_dialog);
+                    dialog.setContentView(R.layout.password_dialog);
 
-					passwordET = (EditText) dialog.findViewById(R.id.password_editText);
-					cancel = (Button) dialog.findViewById(R.id.button_PasswordCancel);
-					ok = (Button) dialog.findViewById(R.id.button_PasswordOK);
+                    passwordET = (EditText) dialog.findViewById(R.id.password_editText);
+                    cancel = (Button) dialog.findViewById(R.id.button_PasswordCancel);
+                    ok = (Button) dialog.findViewById(R.id.button_PasswordOK);
 
+                    cancel.setOnClickListener(new View.OnClickListener() {
 
-					dialog.setTitle("Password Access!");
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+                        }
+                    });
+                    ok.setOnClickListener(new View.OnClickListener() {
 
-					cancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
-						@Override
-						public void onClick(View v) {
-							// TODO Auto-generated method stub
-							dialog.cancel();
-						}
-					});
-					ok.setOnClickListener(new View.OnClickListener() {
+                            if (passwordET.getText().toString().equals(passwordRegistered)) {
 
-						@Override
-						public void onClick(View v) {
-							// TODO Auto-generated method stub
+                                startActivity(new Intent("com.no_texting_while_driving.SETTINGS"));
+                                dialog.dismiss();
+                            } else {
+                                dialog.dismiss();
+                            }
+                        }
+                    });
 
-							if(passwordET.getText().toString().equals(passwordRegistered)){
+                    dialog.show();
 
+                }//end if
+                else {
+                    startActivity(new Intent("com.no_texting_while_driving.SETTINGS"));
+                }//end else
+            }
+        });
 
-								startActivity(new Intent("com.no_texting_while_driving.SETTINGS"));
-								dialog.dismiss();
-							}
-							else{
-								dialog.dismiss();
-							}
+        bRegister.setOnClickListener(new View.OnClickListener() {
+            EditText passwordET;
+            Button cancel;
+            Button ok;
 
-						}
-					});
+            @Override
+            public void onClick(View v) {
 
-					dialog.show();
+                if (settingPrefs.getBoolean("REGISTERED", false) == true) {
 
-				}//end if
-				else{
+                    final String passwordRegistered = settingPrefs.getString("PASSWORD", "");
 
-					startActivity(new Intent("com.no_texting_while_driving.SETTINGS"));
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.setContentView(R.layout.password_dialog);
 
-				}//end else
+                    passwordET = (EditText) dialog.findViewById(R.id.password_editText);
+                    cancel = (Button) dialog.findViewById(R.id.button_PasswordCancel);
+                    ok = (Button) dialog.findViewById(R.id.button_PasswordOK);
 
+                    cancel.setOnClickListener(new View.OnClickListener() {
 
-			}
-		});
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+                        }
+                    });
+                    ok.setOnClickListener(new View.OnClickListener() {
 
-		bRegister.setOnClickListener(new View.OnClickListener() {
-			EditText passwordET;
-			Button cancel;
-			Button ok;
+                        @Override
+                        public void onClick(View v) {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
+                            if (passwordET.getText().toString().equals(passwordRegistered)) {
 
-				if(settingPrefs.getBoolean("REGISTERED", false)== true){
+                                startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
+                                dialog.dismiss();
+                            } else {
+                                dialog.dismiss();
+                            }
+                        }
+                    });
 
-					final String passwordRegistered = settingPrefs.getString("PASSWORD", "");
+                    dialog.show();
 
-					final Dialog dialog = new Dialog(MainActivity.this);
-					dialog.setContentView(R.layout.password_dialog);
+                }//end if
+                else {
+                    startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
+                }//end else
+            }
+        });
 
-					passwordET = (EditText) dialog.findViewById(R.id.password_editText);
-					cancel = (Button) dialog.findViewById(R.id.button_PasswordCancel);
-					ok = (Button) dialog.findViewById(R.id.button_PasswordOK);
+        bHelp.setOnClickListener(new View.OnClickListener() {
 
-
-					dialog.setTitle("Password Access!");
-
-					cancel.setOnClickListener(new View.OnClickListener() {
-
-						@Override
-						public void onClick(View v) {
-							// TODO Auto-generated method stub
-							dialog.cancel();
-						}
-					});
-					ok.setOnClickListener(new View.OnClickListener() {
-
-						@Override
-						public void onClick(View v) {
-							// TODO Auto-generated method stub
-
-							if(passwordET.getText().toString().equals(passwordRegistered)){
-
-
-								startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
-								dialog.dismiss();
-							}
-							else{
-								dialog.dismiss();
-							}
-
-						}
-					});
-
-					dialog.show();
-
-				}//end if
-				else{
-
-					startActivity(new Intent("com.no_texting_while_driving.REGISTER"));
-
-				}//end else
-			}
-		});
-
-		bHelp.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				startActivity(new Intent("com.no_texting_while_driving.HELP"));
-
-			}
-		});
-
-	}
-
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent("com.no_texting_while_driving.HELP"));
+            }
+        });
+    }
 
 }

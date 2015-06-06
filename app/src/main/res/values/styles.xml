@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CodeFont1" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#f90e10ff</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="editTextStyle" parent="@android:style/TextAppearance.Large">
+        <item name="android:typeface">normal</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:textSize">@dimen/edit_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50sp</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="buttonStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:typeface">normal</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:textSize">@dimen/button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50sp</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+</resources>
