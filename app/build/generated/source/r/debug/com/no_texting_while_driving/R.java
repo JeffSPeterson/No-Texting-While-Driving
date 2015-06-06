@@ -12,63 +12,81 @@ public final class R {
         public static final int speedLimits=0x7f040000;
     }
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int customFont=0x7f010000;
+    }
+    public static final class color {
+        public static final int button_background=0x7f050000;
+        public static final int edit_text_background=0x7f050001;
+        public static final int edit_text_border=0x7f050002;
+        public static final int hint=0x7f050003;
+        public static final int sonar_ring=0x7f050004;
+    }
+    public static final class dimen {
+        public static final int button_text=0x7f060000;
+        public static final int edit_text=0x7f060001;
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
-        public static final int lock=0x7f020001;
-        public static final int lock_main=0x7f020002;
-        public static final int unlock=0x7f020003;
-        public static final int uscu_logo=0x7f020004;
+        public static final int button=0x7f020000;
+        public static final int edit_text=0x7f020001;
+        public static final int icon=0x7f020002;
+        public static final int lock=0x7f020003;
+        public static final int lock_main=0x7f020004;
+        public static final int sonar_circle=0x7f020005;
+        public static final int unlock=0x7f020006;
+        public static final int uscu_logo=0x7f020007;
     }
     public static final class id {
-        public static final int TextView01=0x7f060029;
-        public static final int TextView02=0x7f06002a;
-        public static final int TextView03=0x7f06002b;
-        public static final int TextView04=0x7f06002c;
-        public static final int button_About=0x7f06000c;
-        public static final int button_BackToMain=0x7f06000e;
-        public static final int button_ChangePass=0x7f060028;
-        public static final int button_Help=0x7f060011;
-        public static final int button_HowTo=0x7f06000b;
-        public static final int button_PasswordCancel=0x7f060015;
-        public static final int button_PasswordOK=0x7f060014;
-        public static final int button_Register=0x7f06000f;
-        public static final int button_Save=0x7f060020;
-        public static final int button_SetMPH=0x7f060025;
-        public static final int button_Settings=0x7f060010;
-        public static final int button_Speedometer=0x7f060027;
-        public static final int button_SpeedometerHelp=0x7f06000d;
-        public static final int button_SpinnerCancel=0x7f06000a;
-        public static final int button_SpinnerSave=0x7f060009;
-        public static final int button_Turn_On_Off=0x7f060022;
-        public static final int editText_OwnerName=0x7f060019;
-        public static final int editText_OwnerPassword=0x7f06001c;
-        public static final int editText_OwnerPhone=0x7f06001f;
-        public static final int imageView1=0x7f060006;
-        public static final int imageView_lock=0x7f060021;
-        public static final int linearLayout1=0x7f060016;
-        public static final int linearLayout2=0x7f060017;
-        public static final int linearLayout3=0x7f06001d;
-        public static final int passwordPrompt_textview=0x7f060012;
-        public static final int password_editText=0x7f060013;
-        public static final int relativeLayout1=0x7f060004;
-        public static final int relativeLayout_Spinner=0x7f060007;
-        public static final int spinner1=0x7f060008;
-        public static final int textView1=0x7f060000;
-        public static final int textView2=0x7f060001;
-        public static final int textView3=0x7f060002;
-        public static final int textView4=0x7f060003;
-        public static final int textView5=0x7f060005;
-        public static final int textView_MPH=0x7f06002e;
-        public static final int textView_Password=0x7f06001b;
-        public static final int textView_PhoneNumber=0x7f06001e;
-        public static final int textView_Speed=0x7f06002d;
-        public static final int textView_SpeedMPH=0x7f060024;
-        public static final int textView_UserName=0x7f060018;
-        public static final int textView_mph_string=0x7f06002f;
-        public static final int view=0x7f06001a;
-        public static final int view1=0x7f060023;
-        public static final int view2=0x7f060026;
+        public static final int TextView01=0x7f090023;
+        public static final int TextView02=0x7f090024;
+        public static final int TextView03=0x7f090026;
+        public static final int TextView04=0x7f090027;
+        public static final int button_About=0x7f09000c;
+        public static final int button_BackToMain=0x7f09000e;
+        public static final int button_ChangePass=0x7f090021;
+        public static final int button_Help=0x7f090011;
+        public static final int button_HowTo=0x7f09000b;
+        public static final int button_PasswordCancel=0x7f090015;
+        public static final int button_PasswordOK=0x7f090014;
+        public static final int button_Register=0x7f09000f;
+        public static final int button_Save=0x7f090019;
+        public static final int button_SetMPH=0x7f09001e;
+        public static final int button_Settings=0x7f090010;
+        public static final int button_Speedometer=0x7f090020;
+        public static final int button_SpeedometerHelp=0x7f09000d;
+        public static final int button_SpinnerCancel=0x7f09000a;
+        public static final int button_SpinnerSave=0x7f090009;
+        public static final int button_Turn_On_Off=0x7f09001d;
+        public static final int editText_OwnerName=0x7f090016;
+        public static final int editText_OwnerPassword=0x7f090017;
+        public static final int editText_OwnerPhone=0x7f090018;
+        public static final int imageView1=0x7f090006;
+        public static final int imageView_lock=0x7f09001a;
+        public static final int linearLayout1=0x7f090022;
+        public static final int linearLayout2=0x7f090025;
+        public static final int linearLayout3=0x7f090028;
+        public static final int mph_dropdown=0x7f090008;
+        public static final int passwordPrompt_textview=0x7f090012;
+        public static final int password_editText=0x7f090013;
+        public static final int relativeLayout1=0x7f090004;
+        public static final int relativeLayout_Spinner=0x7f090007;
+        public static final int textView1=0x7f090000;
+        public static final int textView2=0x7f090001;
+        public static final int textView3=0x7f090002;
+        public static final int textView4=0x7f090003;
+        public static final int textView5=0x7f090005;
+        public static final int textView_MPH=0x7f09002a;
+        public static final int textView_Speed=0x7f090029;
+        public static final int textView_SpeedMPH=0x7f09001b;
+        public static final int textView_mph_string=0x7f09002b;
+        public static final int view1=0x7f09001c;
+        public static final int view2=0x7f09001f;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -82,9 +100,58 @@ public final class R {
         public static final int speedometer=0x7f030008;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int hello=0x7f050001;
-        public static final int pass_prompt=0x7f050002;
-        public static final int prompt=0x7f050003;
+        public static final int about=0x7f070000;
+        public static final int app_name=0x7f070001;
+        public static final int back=0x7f070002;
+        public static final int cancel=0x7f070003;
+        public static final int copyright=0x7f070004;
+        public static final int developers=0x7f070005;
+        public static final int first_last_name=0x7f070006;
+        public static final int hello=0x7f070007;
+        public static final int help=0x7f070008;
+        public static final int instructions=0x7f070009;
+        public static final int mph=0x7f07000a;
+        public static final int ok=0x7f07000b;
+        public static final int pass_prompt=0x7f07000c;
+        public static final int password=0x7f07000d;
+        public static final int phone_number=0x7f07000e;
+        public static final int register=0x7f07000f;
+        public static final int save=0x7f070010;
+        public static final int settings=0x7f070011;
+        public static final int speedometer=0x7f070012;
     }
+    public static final class style {
+        public static final int CodeFont1=0x7f080000;
+        public static final int buttonStyle=0x7f080001;
+        public static final int editTextStyle=0x7f080002;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a CustomFonts.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CustomFonts_customFont com.no_texting_while_driving:customFont}</code></td><td></td></tr>
+           </table>
+           @see #CustomFonts_customFont
+         */
+        public static final int[] CustomFonts = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.no_texting_while_driving.R.attr#customFont}
+          attribute's value can be found in the {@link #CustomFonts} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.no_texting_while_driving:customFont
+        */
+        public static final int CustomFonts_customFont = 0;
+    };
 }

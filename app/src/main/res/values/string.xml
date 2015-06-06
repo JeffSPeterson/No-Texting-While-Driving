@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World</string>
+    <string name="pass_prompt">Please enter password \n to access Settings.</string>
+    <string name="app_name">No Texting While Driving</string>
+    <string name="settings">SETTINGS</string>
+    <string name="password">Password</string>
+    <string name="register">REGISTER</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save">SAVE</string>
+    <string name="back">BACK</string>
+    <string name="first_last_name">First and Last Name</string>
+    <string name="help">HELP</string>
+    <string name="copyright">Copyright \u00a9 2015\n FANCY COMPANY NAME</string>
+    <string name="developers">Created By:\n\t Josh Irwin \n\t Jeff Peterson</string>
+    <string name="cancel">CANCEL</string>
+    <string name="instructions">Instructions</string>
+    <string name="about">ABOUT</string>
+    <string name="speedometer">SPEEDOMETER</string>
+    <string name="ok">OK</string>
+    <string name="mph">MPH</string>
+
+    <string-array name="speedLimits">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+    </string-array>
+
+</resources>
