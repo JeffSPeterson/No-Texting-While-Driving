@@ -243,10 +243,10 @@ public class BackgroundService extends Service {
                         String messageNotification1 = "** This is a Notification that " +
                                 mTelephonyMgr.getLine1Number() + " has sent a text going over the set Speed of " +
                                 MPH + "mph **";
-                        String messageNotification2 = "** Message sent to " + MessageTONumber + " is below **";
+                        String messageNotification2 = "** Message sent to " + MessageTONumber + " is below the set speed limit. **";
 
                         m.sendTextMessage(destinationNumber, null, messageNotification1, null, null);
-                        m.sendTextMessage(destinationNumber, null, messageNotification2, null, null);
+                        // m.sendTextMessage(destinationNumber, null, messageNotification2, null, null);
                         m.sendTextMessage(destinationNumber, null, text, null, null);
 
                     }//end else
