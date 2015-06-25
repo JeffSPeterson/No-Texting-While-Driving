@@ -39,54 +39,59 @@ containing a value of this type.
         public static final int lock=0x7f020003;
         public static final int lock_main=0x7f020004;
         public static final int sonar_circle=0x7f020005;
-        public static final int unlock=0x7f020006;
-        public static final int uscu_logo=0x7f020007;
+        public static final int text_box_border=0x7f020006;
+        public static final int unlock=0x7f020007;
+        public static final int uscu_logo=0x7f020008;
     }
     public static final class id {
-        public static final int TextView01=0x7f090023;
-        public static final int TextView02=0x7f090024;
-        public static final int TextView03=0x7f090026;
-        public static final int TextView04=0x7f090027;
-        public static final int button_About=0x7f09000c;
-        public static final int button_BackToMain=0x7f09000e;
-        public static final int button_ChangePass=0x7f090021;
-        public static final int button_Help=0x7f090011;
-        public static final int button_HowTo=0x7f09000b;
-        public static final int button_PasswordCancel=0x7f090015;
-        public static final int button_PasswordOK=0x7f090014;
-        public static final int button_Register=0x7f09000f;
-        public static final int button_Save=0x7f090019;
-        public static final int button_SetMPH=0x7f09001e;
-        public static final int button_Settings=0x7f090010;
-        public static final int button_Speedometer=0x7f090020;
-        public static final int button_SpeedometerHelp=0x7f09000d;
-        public static final int button_SpinnerCancel=0x7f09000a;
-        public static final int button_SpinnerSave=0x7f090009;
-        public static final int button_Turn_On_Off=0x7f09001d;
-        public static final int editText_OwnerName=0x7f090016;
-        public static final int editText_OwnerPassword=0x7f090017;
-        public static final int editText_OwnerPhone=0x7f090018;
-        public static final int imageView1=0x7f090006;
-        public static final int imageView_lock=0x7f09001a;
-        public static final int linearLayout1=0x7f090022;
-        public static final int linearLayout2=0x7f090025;
-        public static final int linearLayout3=0x7f090028;
-        public static final int mph_dropdown=0x7f090008;
-        public static final int passwordPrompt_textview=0x7f090012;
-        public static final int password_editText=0x7f090013;
-        public static final int relativeLayout1=0x7f090004;
-        public static final int relativeLayout_Spinner=0x7f090007;
-        public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090001;
-        public static final int textView3=0x7f090002;
-        public static final int textView4=0x7f090003;
-        public static final int textView5=0x7f090005;
-        public static final int textView_MPH=0x7f09002a;
-        public static final int textView_Speed=0x7f090029;
-        public static final int textView_SpeedMPH=0x7f09001b;
-        public static final int textView_mph_string=0x7f09002b;
-        public static final int view1=0x7f09001c;
-        public static final int view2=0x7f09001f;
+        public static final int TextView01=0x7f0a0024;
+        public static final int TextView02=0x7f0a0025;
+        public static final int TextView03=0x7f0a0027;
+        public static final int TextView04=0x7f0a0028;
+        public static final int button_BackToMain=0x7f0a001a;
+        public static final int button_ChangePass=0x7f0a0022;
+        public static final int button_Help=0x7f0a0011;
+        public static final int button_PasswordCancel=0x7f0a0015;
+        public static final int button_PasswordOK=0x7f0a0014;
+        public static final int button_Register=0x7f0a000f;
+        public static final int button_Save=0x7f0a0019;
+        public static final int button_SetMPH=0x7f0a001f;
+        public static final int button_Settings=0x7f0a0010;
+        public static final int button_Speedometer=0x7f0a0021;
+        public static final int button_SpinnerCancel=0x7f0a000a;
+        public static final int button_SpinnerSave=0x7f0a0009;
+        public static final int button_Turn_On_Off=0x7f0a001e;
+        public static final int editText_OwnerName=0x7f0a0016;
+        public static final int editText_OwnerPassword=0x7f0a0017;
+        public static final int editText_OwnerPhone=0x7f0a0018;
+        public static final int imageView1=0x7f0a0006;
+        public static final int imageView_lock=0x7f0a001b;
+        public static final int layout_main=0x7f0a000e;
+        public static final int linearLayout1=0x7f0a0023;
+        public static final int linearLayout2=0x7f0a0026;
+        public static final int linearLayout3=0x7f0a0029;
+        public static final int mission_statement=0x7f0a000c;
+        public static final int mission_statement_text=0x7f0a000d;
+        public static final int mph_dropdown=0x7f0a0008;
+        public static final int one=0x7f0a002d;
+        public static final int passwordPrompt_textview=0x7f0a0012;
+        public static final int password_editText=0x7f0a0013;
+        public static final int relativeLayout1=0x7f0a0004;
+        public static final int relativeLayout_Spinner=0x7f0a0007;
+        public static final int scrollView=0x7f0a000b;
+        public static final int textView1=0x7f0a0000;
+        public static final int textView2=0x7f0a0001;
+        public static final int textView3=0x7f0a0002;
+        public static final int textView4=0x7f0a0003;
+        public static final int textView5=0x7f0a0005;
+        public static final int textView_MPH=0x7f0a002b;
+        public static final int textView_Speed=0x7f0a002a;
+        public static final int textView_SpeedMPH=0x7f0a001c;
+        public static final int textView_mph_string=0x7f0a002c;
+        public static final int three=0x7f0a002f;
+        public static final int two=0x7f0a002e;
+        public static final int view1=0x7f0a001d;
+        public static final int view2=0x7f0a0020;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -98,6 +103,9 @@ containing a value of this type.
         public static final int register=0x7f030006;
         public static final int settings=0x7f030007;
         public static final int speedometer=0x7f030008;
+    }
+    public static final class menu {
+        public static final int main_menu=0x7f090000;
     }
     public static final class string {
         public static final int about=0x7f070000;
@@ -122,8 +130,11 @@ containing a value of this type.
     }
     public static final class style {
         public static final int CodeFont1=0x7f080000;
-        public static final int buttonStyle=0x7f080001;
-        public static final int editTextStyle=0x7f080002;
+        /**  Inherits the default theme for pre-HC (no action bar) 
+         */
+        public static final int NoActionBar=0x7f080001;
+        public static final int buttonStyle=0x7f080002;
+        public static final int editTextStyle=0x7f080003;
     }
     public static final class styleable {
         /** Attributes that can be used with a CustomFonts.

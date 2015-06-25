@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     Button bSettings;
     Button bRegister;
     Button bHelp;
+    View sonarBackground;
 
     /**
      * Called when the activity is first created.
@@ -27,6 +28,9 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+//        sonarBackground = new SonarBackground(this);
+//        this.addContentView(sonarBackground, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+//                ViewGroup.LayoutParams.FILL_PARENT));
 
         bSettings = (Button) findViewById(R.id.button_Settings);
         bRegister = (Button) findViewById(R.id.button_Register);
